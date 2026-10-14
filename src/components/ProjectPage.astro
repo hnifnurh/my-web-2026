@@ -1,0 +1,54 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { base, getSite, getUI, getCats, getProjects } from "../i18n/index.js";
+
+const { lang = "id", id } = Astro.props;
+const site = getSite(lang);
+const ui = getUI(lang);
+const list = getProjects(lang);
+const i = list.findIndex((x) => x.id === id);
+const p = list[i];
+const next = list[(i + 1) % list.length];
+const cat = getCats(lang).find((c) => c.id === p.cat);
+const b = base(lang);
+const paths = { id: `/work/${id}`, en: `/en/work/${id}` };
+---
+<Layout lang={lang} paths={paths} title={`${p.t} — ${ui.case.pageTitle}`} bodyClass="in-detail">
+  <main id="detail">
+    <div class="wrap">
+      <a class="back" href={`${b}/work?c=${p.cat}`}>{ui.case.back}</a>
+      <p class="lead" style="margin-bottom:8px">{cat?.n} · {p.tag}</p>
+      <h1>{p.t}</h1>
+      <p class="lead">{p.d}</p>
+      <div class="facts-d">
+        <div><span>{ui.case.role}</span><b>{p.role}</b></div>
+        <div><span>{ui.case.team}</span><b>{p.team}</b></div>
+        <div><span>{ui.case.dur}</span><b>{p.dur}</b></div>
+        <div><span>{ui.case.year}</span><b>{p.y}</b></div>
+      </div>
+      <div class={`cover ${p.c}`}>
+        {p.img ? <img src={p.img} alt={p.t} /> : <span>{p.t}</span>}
+      </div>
+      <div class="block rv"><h3>{ui.case.overview}</h3><p>{p.ov}</p></div>
+      <div class="block">
+        <h3>{ui.case.process}</h3>
+        <div class="tl">
+          <div class="fill"></div>
+          {p.pr.map((x, k) => <div class="st"><i>{k + 1}</i><p>{x}</p></div>)}
+        </div>
+      </div>
+      <div class="block rv"><h3>{ui.case.result}</h3><p>{p.hasil}</p></div>
+      {p.gallery && p.gallery.length > 0 && (
+        <div class="block rv"><h3>{ui.case.gallery}</h3><div class="gal">{p.gallery.map((g) => <img src={g} alt={p.t} loading="lazy" />)}</div></div>
+      )}
+      <div class="block">
+        <h3>{ui.case.tools}</h3>
+        <div class="tools rv">{p.alat.map((t, k) => <span style={`--k:${k}`}>{t}</span>)}</div>
+      </div>
+      <div class="next">
+        <a class="link" href={`${b}/work`}>{ui.case.back}</a>
+        <a class="link" href={`${b}/work/${next.id}`}>{next.t} ›</a>
+      </div>
+    </div>
+  </main>
+</Layout>

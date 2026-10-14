@@ -1,0 +1,116 @@
+{
+  "id": {
+    "nav": {
+      "about": "Tentang",
+      "work": "Karya",
+      "contact": "Kontak"
+    },
+    "hero": {
+      "work": "Lihat karya",
+      "collab": "Ajak kolaborasi",
+      "cv": "Unduh CV"
+    },
+    "about": {
+      "title": "Tentang aku"
+    },
+    "featured": {
+      "title": "Karya pilihan",
+      "lead": "Beberapa proyek dari enam bidang yang aku kerjakan. Pilih bidang untuk melihat semuanya.",
+      "all": "Lihat semua karya"
+    },
+    "work": {
+      "title": "Semua karya",
+      "lead": "Dikelompokkan per bidang. Klik proyek untuk membaca studi kasusnya.",
+      "all": "Semua",
+      "pageTitle": "Karya"
+    },
+    "card": {
+      "read": "Baca ›"
+    },
+    "case": {
+      "back": "‹ Semua karya",
+      "role": "Peran",
+      "team": "Tim",
+      "dur": "Durasi",
+      "year": "Tahun",
+      "overview": "Ringkasan",
+      "process": "Proses",
+      "result": "Hasil",
+      "gallery": "Galeri",
+      "tools": "Alat",
+      "pageTitle": "Studi kasus"
+    },
+    "form": {
+      "name": "Nama",
+      "email": "Email",
+      "topic": "Topik",
+      "msg": "Ceritakan idemu",
+      "send": "Kirim pesan",
+      "note": "Pesan dikirim lewat aplikasi emailmu.",
+      "thanks": "Terima kasih!",
+      "thanksSub": "Aplikasi emailmu terbuka. Tinggal tekan kirim.",
+      "collab": "Kolaborasi",
+      "other": "Lainnya"
+    },
+    "footer": {
+      "rights": "Seluruh hak dilindungi."
+    }
+  },
+  "en": {
+    "nav": {
+      "about": "About",
+      "work": "Work",
+      "contact": "Contact"
+    },
+    "hero": {
+      "work": "View work",
+      "collab": "Let's collaborate",
+      "cv": "Download CV"
+    },
+    "about": {
+      "title": "About me"
+    },
+    "featured": {
+      "title": "Selected work",
+      "lead": "A few projects from the six fields I work in. Pick a field to see them all.",
+      "all": "View all work"
+    },
+    "work": {
+      "title": "All work",
+      "lead": "Grouped by field. Click a project to read the case study.",
+      "all": "All",
+      "pageTitle": "Work"
+    },
+    "card": {
+      "read": "Read ›"
+    },
+    "case": {
+      "back": "‹ All work",
+      "role": "Role",
+      "team": "Team",
+      "dur": "Duration",
+      "year": "Year",
+      "overview": "Overview",
+      "process": "Process",
+      "result": "Result",
+      "gallery": "Gallery",
+      "tools": "Tools",
+      "pageTitle": "Case study"
+    },
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "topic": "Topic",
+      "msg": "Tell me about your idea",
+      "send": "Send message",
+      "note": "Your message is sent through your email app.",
+      "thanks": "Thank you!",
+      "thanksSub": "Your email app has opened. Just hit send.",
+      "collab": "Collaboration",
+      "other": "Other"
+    },
+    "footer": {
+      "rights": "All rights reserved."
+    }
+  }
+}

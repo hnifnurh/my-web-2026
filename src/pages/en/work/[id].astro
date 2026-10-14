@@ -1,0 +1,9 @@
+---
+import ProjectPage from "../../../components/ProjectPage.astro";
+import { projectIds } from "../../../i18n/index.js";
+export function getStaticPaths() {
+  return projectIds.map((id) => ({ params: { id } }));
+}
+const { id } = Astro.params;
+---
+<ProjectPage lang="en" id={id} />

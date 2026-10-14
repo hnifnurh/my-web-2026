@@ -1,0 +1,106 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Photo from "./Photo.astro";
+import Card from "./Card.astro";
+import { base, getSite, getUI, getCats, getProjects } from "../i18n/index.js";
+
+const { lang = "id" } = Astro.props;
+const site = getSite(lang);
+const ui = getUI(lang);
+const cats = getCats(lang);
+const projects = getProjects(lang);
+const featured = site.featured.map((id) => projects.find((p) => p.id === id)).filter(Boolean);
+const b = base(lang);
+const paths = { id: "/", en: "/en/" };
+---
+<Layout lang={lang} paths={paths}>
+  <main id="home">
+    <header class="hero" id="top">
+      <div class="wrap">
+        <div>
+          <h1 class="words">
+            {site.hero.words.map((w, i) => <span style={`--i:${i}`}>{w}</span>)}{" "}
+            <span class="grad" style={`--i:${site.hero.words.length}`}>{site.hero.accent}</span>
+          </h1>
+          <p class="s">{site.hero.sub}</p>
+          <div class="row">
+            <a class="pill mag" href={`${b}/work`}>{ui.hero.work}</a>
+            <a class="pill ghost" href="#contact">{ui.hero.collab}</a>
+            <a class="pill ghost" href={site.cv} download>{ui.hero.cv} ↓</a>
+          </div>
+        </div>
+        <div class="stage" id="stage">
+          <div class="blob"></div>
+          <div class="portrait" id="portrait"><Photo src={site.photo1} /></div>
+          <div class="chip a">{site.hero.chips[0]}</div>
+          <div class="chip b">{site.hero.chips[1]}</div>
+        </div>
+      </div>
+    </header>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="track" id="track">
+        {[0, 1].map(() => (
+          <div class="grp">{[...site.marquee, ...site.marquee].map((m) => <span>{m}</span>)}</div>
+        ))}
+      </div>
+    </div>
+
+    <section class="alt" id="about">
+      <div class="wrap about">
+        <div class="pic rv"><Photo src={site.photo2} /></div>
+        <div>
+          <h2 class="rv">{ui.about.title}</h2>
+          {site.about.paragraphs.map((t, i) => <p class="rv" style={`--d:${i + 1}`} set:html={t} />)}
+          <div class="skills rv" style="--d:4">{site.about.skills.map((s) => <span>{s}</span>)}</div>
+          <div class="facts rv" style="--d:5">
+            {site.about.stats.map((s) => <div><b data-n={s.n} data-s={s.s}>0</b><span>{s.l}</span></div>)}
+          </div>
+          <p class="rv" style="margin-top:32px"><a class="pill" href={site.cv} download>{ui.hero.cv} ↓</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="wrap">
+        <h2 class="rv">{ui.featured.title}</h2>
+        <p class="lead rv" style="--d:1">{ui.featured.lead}</p>
+        <div class="skills rv" style="--d:2;margin:24px 0 48px">
+          {cats.map((c) => <span><a href={`${b}/work?c=${c.id}`}>{c.n}</a></span>)}
+        </div>
+        <div class="grid">{featured.map((p, i) => <Card p={p} i={i} lang={lang} />)}</div>
+        <p class="rv" style="margin-top:40px"><a class="pill" href={`${b}/work`}>{ui.featured.all}</a></p>
+      </div>
+    </section>
+
+    <section class="alt" id="contact">
+      <div class="wrap contact">
+        <div>
+          <h2 class="rv">{site.contact.title}</h2>
+          <p class="lead rv" style="--d:1">{site.contact.sub}</p>
+          <div class="ways">
+            {site.contact.ways.map((w, i) => <div class="rv" style={`--d:${i + 2}`}><b>{w.t}</b><span>{w.d}</span></div>)}
+          </div>
+        </div>
+        <form id="form" class="rv" style="--d:2" novalidate data-email={site.email}>
+          <div class="two">
+            <div class="f"><input id="nm" placeholder=" " autocomplete="name" /><label for="nm">{ui.form.name}</label></div>
+            <div class="f"><input id="em" type="email" placeholder=" " autocomplete="email" /><label for="em">{ui.form.email}</label></div>
+          </div>
+          <div class="f">
+            <select id="tp">
+              {cats.map((c) => <option>{c.n}</option>)}
+              <option>{ui.form.collab}</option>
+              <option>{ui.form.other}</option>
+            </select>
+            <label for="tp">{ui.form.topic}</label>
+          </div>
+          <div class="f"><textarea id="ms" placeholder=" "></textarea><label for="ms">{ui.form.msg}</label></div>
+          <button class="pill mag" type="submit">{ui.form.send}</button>
+          <p class="note">{ui.form.note}</p>
+          <div class="ok"><div><svg viewBox="0 0 72 72"><circle cx="36" cy="36" r="31" /><path d="M22 37l10 10 18-21" /></svg><h3>{ui.form.thanks}</h3><p style="color:var(--muted)">{ui.form.thanksSub}</p></div></div>
+        </form>
+      </div>
+    </section>
+  </main>
+</Layout>

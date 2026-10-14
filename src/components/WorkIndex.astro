@@ -1,0 +1,36 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "./Card.astro";
+import { getSite, getUI, getCats, getProjects } from "../i18n/index.js";
+
+const { lang = "id" } = Astro.props;
+const site = getSite(lang);
+const ui = getUI(lang);
+const projects = getProjects(lang);
+const groups = getCats(lang)
+  .map((c) => ({ ...c, items: projects.filter((p) => p.cat === c.id) }))
+  .filter((g) => g.items.length > 0);
+const paths = { id: "/work", en: "/en/work" };
+---
+<Layout lang={lang} paths={paths} title={`${ui.work.pageTitle} — ${site.name}`} bodyClass="v-work">
+  <main id="workpage">
+    <div class="wrap">
+      <h2>{ui.work.title}</h2>
+      <p class="lead" style="margin-top:12px">{ui.work.lead}</p>
+      <div class="tabs" id="tabs">
+        <span class="ind" id="ind"></span>
+        <button data-c="all" class="on">{ui.work.all}</button>
+        {groups.map((g) => <button data-c={g.id}>{g.n}</button>)}
+      </div>
+      <div id="groups">
+        {groups.map((g) => (
+          <div class="group" data-g={g.id}>
+            <h3 class="rv">{g.n}</h3>
+            <p class="rv">{g.d}</p>
+            <div class="grid">{g.items.map((p, i) => <Card p={p} i={i} lang={lang} />)}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </main>
+</Layout>

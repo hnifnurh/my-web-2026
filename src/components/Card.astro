@@ -1,0 +1,16 @@
+---
+import { base, getCats, getUI } from "../i18n/index.js";
+const { p, i = 0, lang = "id" } = Astro.props;
+const cat = getCats(lang).find((c) => c.id === p.cat);
+const ui = getUI(lang);
+---
+<a class="proj rv" style={`--d:${i}`} href={`${base(lang)}/work/${p.id}`}>
+  <div class={`cover ${p.c}`}>
+    {p.img ? <img src={p.img} alt={p.t} loading="lazy" /> : <span>{p.t}</span>}
+  </div>
+  <div class="meta">
+    <h4>{p.t}</h4>
+    <p>{p.d}</p>
+    <small><span>{cat?.n} · {p.y}</span><span class="link">{ui.card.read}</span></small>
+  </div>
+</a>

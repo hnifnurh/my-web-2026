@@ -1,0 +1,10 @@
+---
+const { src = "" } = Astro.props;
+---
+{src ? <img src={src} alt="Foto profil" /> : (
+  <svg viewBox="0 0 400 500" role="img" aria-label="Foto profil (placeholder)">
+    <rect width="400" height="500" fill="#8e8e93" opacity=".16" />
+    <circle cx="200" cy="190" r="78" fill="#8e8e93" opacity=".7" />
+    <path d="M50 500c0-110 66-170 150-170s150 60 150 170z" fill="#8e8e93" opacity=".7" />
+  </svg>
+)}

@@ -1,0 +1,71 @@
+---
+import "../styles/global.css";
+import { base, home, getSite, getUI } from "../i18n/index.js";
+const { lang = "id", paths, title, bodyClass = "" } = Astro.props;
+const site = getSite(lang);
+const ui = getUI(lang);
+const pageTitle = title || site.title;
+const favicon = "data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✦</text></svg>";
+---
+<!doctype html>
+<html lang={lang}>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="description" content={site.description} />
+  <link rel="icon" href="/icon/logo-white.svg" />
+  <link rel="alternate" hreflang="id" href={paths.id} />
+  <link rel="alternate" hreflang="en" href={paths.en} />
+  <title>{pageTitle}</title>
+  <script is:inline define:vars={{ lang, paths }}>
+    // Pilih bahasa: pilihan tersimpan > bahasa browser (hanya dari halaman Indonesia)
+    try {
+      const saved = localStorage.getItem("lang");
+      if (saved) { if (saved !== lang && paths[saved]) location.replace(paths[saved] + location.search + location.hash); }
+      else if (lang === "id" && (navigator.language || "").toLowerCase().startsWith("en")) location.replace(paths.en + location.search + location.hash);
+    } catch (e) {}
+  </script>
+</head>
+<body class={bodyClass}>
+  <div id="bar"></div>
+  <nav id="nav">
+    <div class="wrap">
+      <a class="logo" href={home(lang)} aria-label="Home">
+        <span class="mk">
+          {site.logo ? <img src={site.logo} alt="Logo" /> : (
+            <svg viewBox="0 0 36 36" width="36" height="36" aria-hidden="true">
+              <text x="18" y="25" text-anchor="middle" font-size="19" font-weight="700" fill="currentColor" font-family="-apple-system,Helvetica,sans-serif">{site.initial}</text>
+            </svg>
+          )}
+        </span>
+        <span>{site.name}</span>
+      </a>
+      <div class="nr">
+        <ul>
+          <li><a href={`${home(lang)}#about`} data-nav="about">{ui.nav.about}</a></li>
+          <li><a href={`${base(lang)}/work`} data-nav="work">{ui.nav.work}</a></li>
+          <li><a href={`${home(lang)}#contact`} data-nav="contact">{ui.nav.contact}</a></li>
+        </ul>
+        <div class="lang" aria-label="Language">
+          <a href={paths.id} data-lang="id" hreflang="id" class={lang === "id" ? "on" : ""}>ID</a>
+          <a href={paths.en} data-lang="en" hreflang="en" class={lang === "en" ? "on" : ""}>EN</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <slot />
+
+  <footer>
+    <div class="wrap">
+      <span>© {new Date().getFullYear()} {site.name}. {ui.footer.rights}</span>
+      <span class="soc">
+        <a href={site.cv} download>CV</a>
+        {site.social.map((s) => <a href={s.url}>{s.label}</a>)}
+        <a href={`mailto:${site.email}`}>Email</a>
+      </span>
+    </div>
+  </footer>
+  <script>import "../scripts/main.js";</script>
+</body>
+</html>

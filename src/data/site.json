@@ -1,0 +1,190 @@
+{
+  "name": "Hanif Nahwan Nurhadi",
+  "initial": "HNN",
+  "logo": "/icon/logo-white.svg",
+  "photo1": "pic/hanif_1.jpeg",
+  "photo2": "pic/hanif_2.jpg",
+  "email": "hanifnhwn@gmail.com",
+  "cv": {
+    "id": "/cv/cv-id.pdf",
+    "en": "/cv/cv-en.pdf"
+  },
+  "featured": [
+    "raps-maju",
+    "raja-brawijaya-2023",
+    "da-filkom-ub",
+    "etl-odoo",
+    "neural-nakha",
+    "mii"
+  ],
+  "social": [
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/hanifnurh/"
+    },
+    {
+      "label": "Instagram",
+      "url": "https://www.instagram.com/hanifnurh_/"
+    },
+    {
+      "label": "Facebook",
+      "url": "https://www.facebook.com/hanif.nahwan"
+    },
+    {
+      "label": "GitHub",
+      "url": "https://github.com/hnifnurh"
+    }
+  ],
+  "i18n": {
+    "id": {
+      "title": "Hanif Nahwan — Website, Data & ETL, UI/UX",
+      "description": "Portofolio Hanif: UI/UX, mobile app, website, desain grafis, data & ETL, dan videografi.",
+      "hero": {
+        "words": [
+          "Memahami",
+          "Masalah,",
+          "Membangun"
+        ],
+        "accent": "Solusi.",
+        "sub": "Aku Nama Kamu. Aku mengerjakan UI/UX, aplikasi mobile, website, desain grafis, data & ETL, sampai videografi.",
+        "chips": [
+          "UI/UX Design",
+          "Website"
+        ]
+      },
+      "marquee": [
+        "UI/UX Design",
+        "Mobile App",
+        "Website",
+        "Desain Grafis",
+        "Data & ETL",
+        "Videografi"
+      ],
+      "about": {
+        "paragraphs": [
+          "Halo, aku <strong>Hanif Nahwan Nurhadi</strong>, creator digital dengan pengalaman 2 tahun di UI/UX, serta tambahan pengalaman 1 Tahun mengeksplorasi bidang data & ETL, mobile, web, untuk startup dan brand di Indonesia.",
+          "Aku suka memahami masalah, mengolah informasi, dan menemukan solusi yang tepat melalui pendekatan yang terstruktur dan berorientasi pada kebutuhan.",
+          "Di luar kerja, aku suka fotografi jalanan, game, membaca buku, dan belajar."
+        ],
+        "skills": [
+          "Data & ETL",
+          "Website",
+          "UI/UX Design",
+          "Desain Grafis",
+          "Mobile App",
+          "Videografi"
+        ],
+        "stats": [
+          {
+            "n": 2,
+            "s": "+",
+            "l": "Tahun pengalaman"
+          },
+          {
+            "n": 40,
+            "s": "+",
+            "l": "Proyek selesai"
+          },
+          {
+            "n": 12,
+            "s": "",
+            "l": "Klien"
+          }
+        ]
+      },
+      "contact": {
+        "title": "Mau bikin sesuatu bareng?",
+        "sub": "Terbuka untuk proyek freelance dan kerja sama jangka panjang.",
+        "ways": [
+          {
+            "t": "Proyek baru",
+            "d": "Ceritakan tujuan, jadwal, dan anggaranmu."
+          },
+          {
+            "t": "Kolaborasi",
+            "d": "Punya ide produk atau konten? Ayo gabung."
+          },
+          {
+            "t": "Respons cepat",
+            "d": "Aku balas dalam 2 hari kerja."
+          }
+        ]
+      }
+    },
+    "en": {
+      "title": "Hanif Nahwan — Designer, Developer, Videographer",
+      "description": "Hanif Nahwan's portfolio: UI/UX, mobile apps, websites, graphic design, data & ETL, and videography.",
+      "hero": {
+        "words": [
+          "Understanding",
+          " Problems,",
+          "Building"
+        ],
+        "accent": "Solutions.",
+        "sub": "I'm Hanif Nahwan Nurhadi. I work on UI/UX, mobile apps, websites, graphic design, data & ETL, and videography.",
+        "chips": [
+          "UI/UX Design",
+          "Website"
+        ]
+      },
+      "marquee": [
+        "Data & ETL",
+        "Website",
+        "UI/UX Design",
+        "Graphic Design",
+        "Mobile App",
+        "Videography"
+      ],
+      "about": {
+        "paragraphs": [
+          "Hi, I'm <strong>Hanif Nahwan Nurhadi</strong>, a digital creator with 2 years of experience in UI/UX and an additional year exploring data & ETL, mobile, and web development for startups and brands in Indonesia.",
+          "I enjoy understanding problems, working with information, and finding the right solutions through a structured, needs-driven approach.",
+          "Outside of work, I enjoy street photography, gaming, reading and learning."
+        ],
+        "skills": [
+          "Data & ETL",
+          "Website",
+          "UI/UX Design",
+          "Graphic Design",
+          "Mobile App",
+          "Videography"
+        ],
+        "stats": [
+          {
+            "n": 2,
+            "s": "+",
+            "l": "Years of experience"
+          },
+          {
+            "n": 40,
+            "s": "+",
+            "l": "Projects completed"
+          },
+          {
+            "n": 12,
+            "s": "",
+            "l": "Clients"
+          }
+        ]
+      },
+      "contact": {
+        "title": "Wanna make something together?",
+        "sub": "Open to freelance projects and long-term partnerships.",
+        "ways": [
+          {
+            "t": "New project",
+            "d": "Tell me your goals, timeline, and budget."
+          },
+          {
+            "t": "Collaboration",
+            "d": "Have a product or content idea? Let's team up."
+          },
+          {
+            "t": "Quick reply",
+            "d": "I reply within 2 working days."
+          }
+        ]
+      }
+    }
+  }
+}

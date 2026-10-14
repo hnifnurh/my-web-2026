@@ -1,0 +1,80 @@
+[
+    {
+    "id": "data",
+    "i18n": {
+      "id": {
+        "n": "Data & ETL",
+        "d": "Pipeline, gudang data, dan dasbor."
+      },
+      "en": {
+        "n": "Data & ETL",
+        "d": "Pipelines, data warehouses, and dashboards."
+      }
+    }
+  },
+  {
+    "id": "web",
+    "i18n": {
+      "id": {
+        "n": "Website",
+        "d": "Situs perusahaan, portofolio, dan toko daring."
+      },
+      "en": {
+        "n": "Website",
+        "d": "Company sites, portfolios, and online stores."
+      }
+    }
+  },
+  {
+    "id": "uiux",
+    "i18n": {
+      "id": {
+        "n": "UI/UX Design",
+        "d": "Riset, alur pengguna, dan antarmuka."
+      },
+      "en": {
+        "n": "UI/UX Design",
+        "d": "Research, user flows, and interfaces."
+      }
+    }
+  },
+  {
+    "id": "design",
+    "i18n": {
+      "id": {
+        "n": "Desain Grafis",
+        "d": "Identitas visual, poster, dan materi kampanye."
+      },
+      "en": {
+        "n": "Graphic Design",
+        "d": "Visual identity, posters, and campaign materials."
+      }
+    }
+  },
+  {
+    "id": "mobile",
+    "i18n": {
+      "id": {
+        "n": "Mobile App",
+        "d": "Aplikasi iOS dan Android."
+      },
+      "en": {
+        "n": "Mobile App",
+        "d": "iOS and Android apps."
+      }
+    }
+  },
+  {
+    "id": "video",
+    "i18n": {
+      "id": {
+        "n": "Videografi",
+        "d": "Video produk, dokumenter, dan acara."
+      },
+      "en": {
+        "n": "Videography",
+        "d": "Product videos, documentaries, and events."
+      }
+    }
+  }
+]
