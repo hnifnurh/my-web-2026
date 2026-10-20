@@ -38,7 +38,7 @@
   "i18n": {
     "id": {
       "title": "Hanif Nahwan — Website, Data & ETL, UI/UX",
-      "description": "Portofolio Hanif: UI/UX, mobile app, website, desain grafis, data & ETL, dan videografi.",
+      "description": "Portofolio Hanif: UI/UX, mobile app, website, desain grafis, dan data & ETL.",
       "hero": {
         "words": [
           "Memahami",
@@ -46,7 +46,7 @@
           "Membangun"
         ],
         "accent": "Solusi.",
-        "sub": "Aku Nama Kamu. Aku mengerjakan UI/UX, aplikasi mobile, website, desain grafis, data & ETL, sampai videografi.",
+        "sub": "Aku Hanif. Aku mengerjakan data & ETL, website, UI/UX, dan desain grafis.",
         "chips": [
           "UI/UX Design",
           "Website"
@@ -113,7 +113,7 @@
     },
     "en": {
       "title": "Hanif Nahwan — Designer, Developer, Videographer",
-      "description": "Hanif Nahwan's portfolio: UI/UX, mobile apps, websites, graphic design, data & ETL, and videography.",
+      "description": "Hanif Nahwan's portfolio: UI/UX, mobile apps, websites, graphic design, and data & ETL.",
       "hero": {
         "words": [
           "Understanding",
@@ -121,7 +121,7 @@
           "Building"
         ],
         "accent": "Solutions.",
-        "sub": "I'm Hanif Nahwan Nurhadi. I work on UI/UX, mobile apps, websites, graphic design, data & ETL, and videography.",
+        "sub": "I'm Hanif. I work on data & ETL, websites, UI/UX, and graphic design.",
         "chips": [
           "UI/UX Design",
           "Website"
